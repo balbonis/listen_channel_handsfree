@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>listen_client_v3 Voice Agent</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>listen_client_v3 Voice Agent</h1>
+      <p class="subtitle">Hands-free conversational AI using MCP Orchestrator + ElevenLabs.</p>
+
+      <div class="controls">
+        <button id="recordBtn">🎙 Start Recording</button>
+
+        <label class="toggle-container">
+          <input type="checkbox" id="handsFreeToggle">
+          <span>Hands-Free Mode</span>
+        </label>
+
+        <div id="aiStatus" class="status status-idle">
+          <span class="dot"></span>
+          <span class="label">Idle</span>
+        </div>
+      </div>
+
+      <p id="status" class="small-text"></p>
+
+      <h2>You said:</h2>
+      <pre id="userText"></pre>
+
+      <h2>AI Reply:</h2>
+      <pre id="replyText"></pre>
+
+      <h2>Audio Reply:</h2>
+      <audio id="replyAudio" controls></audio>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
